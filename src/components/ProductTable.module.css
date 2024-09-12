@@ -1,0 +1,182 @@
+/* Container Styles */
+.tableContainer {
+  padding: 0 10vw ;
+  margin: 0 auto;
+  
+  /* max-width: 1200px; */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* new code */
+.buttonContainer {
+  display: flex;
+  flex-wrap: nowrap; /* Disable wrapping */
+  justify-content: flex-start; /* Align items to the start */
+  padding: 10px 0; /* Adjust padding */
+  margin: 0 auto;
+  
+  max-width: 100%; /* Ensure container takes full width */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping of text inside buttons */
+}
+
+.customButton {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: bolder;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0px 2px 6px rgba(55, 58, 29, 0.99);
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping inside buttons */
+}
+/* end new code */
+
+/* Table Styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+/* Table Header and Cells */
+.table th, .table td {
+  padding: 6px; /* Reduced padding for smaller screens */
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+/* Ensure that table content wraps correctly */
+.table th, .table td {
+  white-space: normal; /* Allow text to wrap */
+}
+
+/* Ensure button sizes are compact */
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 4px 6px; /* Further reduced padding to minimize button size */
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 12px; /* Slightly smaller font for buttons */
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+/* Heading Styles */
+.heading {
+  background-color: hsl(155, 68%, 59%);
+  padding: 10px 15px; /* Reduced padding for better fit */
+  margin: 10px ; /* Reduced margin */
+  text-align: center;
+  font-size: 1.3rem; /* Slightly smaller font size */
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(55, 58, 29, 0.99);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .table th, .table td {
+    font-size: 12px; /* Smaller font size for mobile */
+    padding: 4px; /* Further reduced padding */
+  }
+
+  .table th:nth-child(3), .table td:nth-child(3) {
+    width: 35%; /* Adjusted width for the Description column */
+  }
+
+  .table th:nth-child(4), .table td:nth-child(4) {
+    width: 20%; /* Adjusted width for the Price column */
+  }
+
+  .table th:nth-child(5), .table td:nth-child(5) {
+    width: 15%; /* Adjusted width for the Action column */
+  }
+
+  .table th:nth-child(6), .table td:nth-child(6) {
+    width: 15%; /* Adjusted width for the Picture column */
+  }
+
+  .tableContainer {
+    overflow-x: hidden; /* Prevent horizontal scrolling on smaller screens */
+    padding: 0; /* Remove extra padding */
+  }
+  
+  .table {
+    width: 100%; /* Ensure full width without horizontal scrolling */
+  }
+}
+
+/* overflow-y: hidden; */
+/* style.module.css */
+
+.tableContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.table {
+  width: 100%;
+  /* border-collapse: collapse; */
+}
+
+.heading {
+  font-size: 24x;
+  margin: 10px 0;
+}
+
+.head {
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn {
+  background-color: #28a745; /* Green button */
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.disabledBtn {
+  background-color: #d3d3d3; /* Grey color for disabled button */
+  color: #777; /* Lighter color for disabled text */
+  cursor: not-allowed;
+  font-size: 14px;
+  /* padding: 4px 6px; */
+  text-align: center;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.disabledBtn:hover {
+  background-color: #d3d3d3; /* No change on hover for disabled */
+}
+
+.table th, .table td {
+  padding: 6px;
+  vertical-align: middle;
+  /* word-wrap: break-word; */
+  text-align: center;
+  
+  /* Set equal height for each cell */
+  /* height: 60px; */
+   /* Set desired fixed height for cells */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
