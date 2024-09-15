@@ -170,7 +170,7 @@ const products = [
     items: [
       {
         id: '1', name: 'Casio 552 Functions Calculator', description: 'fx-991EX', price: '2400', pictureUrl: [Calc552],
-        // customClass: 'soldClass',
+        
       },
       { id: '2', name: 'Casio 417 Functions Calculator', description: 'fx-991ES', price: '1650', pictureUrl: [Calc417] },
     ],
@@ -200,79 +200,6 @@ const products = [
     ],
   },
 ];
-
-// const ProductTable = ({ selectedCategory }) => {
-//   const filteredProducts = selectedCategory === 'all'
-//     ? products
-//     : products.filter(category => category.id === selectedCategory);
-
-//   const generateWhatsAppLink = (name, price, customClass) => {
-//     const numericPrice = price.split(' ')[0]; // Extract numeric price
-//     const message = `I want to buy ${name} with price ${numericPrice} PKR`;
-
-//     let whatsappNumber = '923183098174'; // Default WhatsApp number
-
-//     if (customClass === 'specific-class') {
-//       whatsappNumber = '923001234567'; // Specific WhatsApp number based on class
-//     }
-
-//     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-//   };
-
-//   return (
-//     <div className={styles.tableContainer}>
-//       {filteredProducts.map((category, index) => (
-//         <div key={index} id={category.id}>
-//           <h2 className={styles.heading}>{category.category}</h2>
-//           <table className={`table table-striped ${styles.table}`}>
-//             <thead>
-//               <tr>
-//                 <th className={styles.head}>S/No</th>
-//                 <th className={styles.head}>Items</th>
-//                 <th className={styles.head}>Description</th>
-//                 <th className={styles.head}>Price</th>
-//                 <th className={styles.head}>Action</th>
-//                 <th className={styles.head}>Picture</th>
-//               </tr>
-//             </thead>
-//             <tbody>
-//               {category.items.map(item => (
-//                 <tr key={item.id}>
-//                   <td>{item.id}</td>
-//                   <td>{item.name}</td>
-//                   <td>{item.description}</td>
-//                   <td>{item.price}</td>
-//                   <td>
-//                     <a
-//                       href={generateWhatsAppLink(item.name, item.price, item.customClass)}
-//                       target="_blank"
-//                       className={`${styles.btn} ${item.customClass}`}
-//                     >
-//                       Buy
-//                     </a>
-//                   </td>
-//                   <td>
-//                     <a
-//                       href={item.pictureUrl}
-//                       target="_blank"
-//                       rel="noopener noreferrer"
-//                       className={styles.btn}
-//                     >
-//                       Picture
-//                     </a>
-//                   </td>
-//                 </tr>
-//               ))}
-//             </tbody>
-//           </table>
-//           <hr style={{ border: '2px solid black', marginBottom: '20px' }} />
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default ProductTable;
 
 
 const ProductTable = ({ selectedCategory }) => {
@@ -325,17 +252,8 @@ const ProductTable = ({ selectedCategory }) => {
                   <td>{item.description}</td> {/* Item Description */}
                   <td>{item.price}</td> {/* Item Price */}
                   <td>
-                    {item.customClass === 'sold' ? (
-                      // Disable button if the item is sold
-                      <button
-                        className={`${styles.btn} ${styles.disabledBtn}`}
-                        disabled
-                      >
-                        Sold
-                      </button>
-                    ) : (
-                      // Generate WhatsApp link for buying
-                      <a
+              
+                       <a
                         href={generateWhatsAppLink(item.name, item.price, item.customClass)}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -343,7 +261,7 @@ const ProductTable = ({ selectedCategory }) => {
                       >
                         Buy
                       </a>
-                    )}
+                    
                   </td>
                   <td>
                     {/* Link to item picture */}
@@ -361,7 +279,6 @@ const ProductTable = ({ selectedCategory }) => {
             </tbody>
           </table>
 
-          {/* Divider between categories */}
           <hr style={{ border: '2px solid black', marginBottom: '20px' }} />
         </div>
       ))}
