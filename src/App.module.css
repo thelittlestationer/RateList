@@ -22,5 +22,5 @@ html, body {
 
 th, td {
   text-align: left;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
 }
