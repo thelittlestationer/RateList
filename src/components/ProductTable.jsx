@@ -196,7 +196,7 @@ const products = [
     id: 'others',
     items: [
       { id: 1, name: 'Correction Pen', description: '(Whito)', price: '60', pictureUrl: [Soon] },
-      { id: 2, name: 'Sticky Notes', description: '3x3 inch, 100 pcs, (Multicolor)', price: '100', pictureUrl: 'https://example.com/images/sticky_notes.jpg' },
+      { id: 2, name: 'Sticky Notes', description: '3x3 inch, 100 pcs, (Multicolor)', price: '100', pictureUrl: [Soon] },
       { id: 3, name: 'NOTE PAD', description: 'High Quality / Size: A6', price: '70', pictureUrl: [Soon] },
       { id: 4, name: 'Paper Cutter', description: 'Normal Quality', price: '180', pictureUrl: [Soon] },
       { id: 5, name: 'Scissor', description: 'Normal Quality', price: '60', pictureUrl:[Soon]},
