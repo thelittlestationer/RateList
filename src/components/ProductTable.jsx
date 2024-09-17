@@ -55,6 +55,12 @@ import Sharpner from './Pictures/Sharpner.jpg';
 import Calc417 from './Pictures/417.CasioCalculator.jpg';
 import Calc552 from './Pictures/552.CasioCalculator.jpg';
 
+
+
+//soon
+import Soon from './Pictures/Soon.jpg';
+
+
 //SPORTS
 //1
 //2
@@ -179,9 +185,9 @@ const products = [
     category: 'Sports',
     id: 'sports',
     items: [
-      { id: '1', name: 'Cricket Ball', description: 'FG Company', price: '420', pictureUrl: 'https://example.com/images/cricket_ball.jpg' },
-      { id: '2', name: 'Table Tennis Ball', description: 'Double circle', price: '80', pictureUrl: 'https://example.com/images/table_tennis_ball.jpg' },
-      { id: '3', name: 'Badminton Shuttle', description: 'Ghafoor Champion', price: '350', pictureUrl: 'https://example.com/images/badminton_shuttle.jpg' },
+      { id: '1', name: 'Cricket Ball', description: 'FG Company', price: '420', pictureUrl: [Soon] },
+      { id: '2', name: 'Table Tennis Ball', description: 'Double circle', price: '80', pictureUrl: [Soon] },
+      { id: '3', name: 'Badminton Shuttle', description: 'Ghafoor Champion', price: '350', pictureUrl: [Soon] },
     ],
   },
 
@@ -189,14 +195,14 @@ const products = [
     category: 'Others',
     id: 'others',
     items: [
-      { id: 1, name: 'Correction Pen', description: '(Whito)', price: '60', pictureUrl: 'https://example.com/images/correction_pen.jpg' },
+      { id: 1, name: 'Correction Pen', description: '(Whito)', price: '60', pictureUrl: [Soon] },
       { id: 2, name: 'Sticky Notes', description: '3x3 inch, 100 pcs, (Multicolor)', price: '100', pictureUrl: 'https://example.com/images/sticky_notes.jpg' },
-      { id: 3, name: 'NOTE PAD', description: 'High Quality / Size: A6', price: '70', pictureUrl: 'https://example.com/images/note_pad.jpg' },
-      { id: 4, name: 'Paper Cutter', description: 'Normal Quality', price: '180', pictureUrl: 'https://example.com/images/paper_cutter.jpg' },
-      { id: 5, name: 'Scissor', description: 'Normal Quality', price: '60', pictureUrl: 'https://example.com/images/scissor.jpg' },
-      { id: 6, name: 'Glue Stick', description: 'Company: Nafees', price: '70', pictureUrl: 'https://example.com/images/scissor.jpg' },
-      { id: 7, name: 'Elfy', description: 'GMSA', price: '30', pictureUrl: 'https://example.com/images/scissor.jpg' },
-      { id: 8, name: 'Metallic Pen Holder', description: 'High Quality', price: '400', pictureUrl: 'https://example.com/images/scissor.jpg' },
+      { id: 3, name: 'NOTE PAD', description: 'High Quality / Size: A6', price: '70', pictureUrl: [Soon] },
+      { id: 4, name: 'Paper Cutter', description: 'Normal Quality', price: '180', pictureUrl: [Soon] },
+      { id: 5, name: 'Scissor', description: 'Normal Quality', price: '60', pictureUrl:[Soon]},
+      { id: 6, name: 'Glue Stick', description: 'Company: Nafees', price: '70', pictureUrl: [Soon]},
+      { id: 7, name: 'Elfy', description: 'GMSA', price: '30', pictureUrl: [Soon]},
+      { id: 8, name: 'Metallic Pen Holder', description: 'High Quality', price: '400', pictureUrl: [Soon]},
     ],
   },
 ];
