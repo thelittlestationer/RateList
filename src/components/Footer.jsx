@@ -10,7 +10,7 @@ function Footer() {
     <div className={styles.container}>
     <footer className={styles.footer}>
       <p>© 2024 The Little Stationer. All rights reserved.</p>
-      <a href="https://chat.whatsapp.com/C4fQhFyWbTC0vQkcJqeA7V" className={`text-white mx-3 ${styles.anker}`} target="_blank" rel="noopener noreferrer" >
+      <a href="https://chat.whatsapp.com/GTAnqUA0zPgHCkp63sgCJf" className={`text-white mx-3 ${styles.anker}`} target="_blank" rel="noopener noreferrer" >
       <FontAwesomeIcon icon={faWhatsapp} size="2x"/> &nbsp; <u>Join Whatsapp</u></a>
     </footer>
     </div>
