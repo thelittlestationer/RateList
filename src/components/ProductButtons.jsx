@@ -16,7 +16,7 @@ const categories = [
   { name: 'Rulers', id: 'rulers' },
   { name: 'Drawing Related', id: 'drawing-related' },
   { name: 'Calculators', id: 'calculators' },
-  // { name: 'Sports', id: 'sports' },
+  { name: 'Sports', id: 'sports' },
   { name: 'Others', id: 'others' }
 ];
 
