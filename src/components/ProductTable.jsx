@@ -149,7 +149,7 @@ const products = [
     category: 'Plastic Files',
     id: 'plastic-files',
     items: [
-      { id: '1', name: 'Button File', description: 'Color: Green', price: '40', pictureUrl: [ButtonFiles] },
+      { id: '1', name: 'Button File', description: 'Color: Green', price: '45', pictureUrl: [ButtonFiles] },
       { id: '2', name: 'Assignment File', description: 'Stick files', price: '40', pictureUrl: [AssignmentFiles] },
     ],
   },
@@ -192,19 +192,19 @@ const products = [
   // },
 
   // {
-  //   category: 'Others',
-  //   id: 'others',
-  //   items: [
-  //     { id: 1, name: 'Correction Pen', description: '(Whito)', price: '60', pictureUrl: [Soon] },
-  //     { id: 2, name: 'Sticky Notes', description: '3x3 inch, 100 pcs, (Multicolor)', price: '100', pictureUrl: [Soon] },
-  //     { id: 3, name: 'NOTE PAD', description: 'High Quality / Size: A6', price: '70', pictureUrl: [Soon] },
-  //     { id: 4, name: 'Paper Cutter', description: 'Normal Quality', price: '180', pictureUrl: [Soon] },
-  //     { id: 5, name: 'Scissor', description: 'Normal Quality', price: '60', pictureUrl:[Soon]},
-  //     { id: 6, name: 'Glue Stick', description: 'Company: Nafees', price: '70', pictureUrl: [Soon]},
-  //     { id: 7, name: 'Elfy', description: 'GMSA', price: '30', pictureUrl: [Soon]},
-  //     { id: 8, name: 'Metallic Pen Holder', description: 'High Quality', price: '400', pictureUrl: [Soon]},
-  //   ],
-  // },
+    category: 'Others',
+    id: 'others',
+    items: [
+      { id: 1, name: 'Correction Pen', description: '(Whito)', price: '60', pictureUrl: [Soon] },
+      { id: 2, name: 'Sticky Notes', description: '3x3 inch, 100 pcs, (Multicolor)', price: '100', pictureUrl: [Soon] },
+      { id: 3, name: 'NOTE PAD', description: 'High Quality / Size: A6', price: '70', pictureUrl: [Soon] },
+      { id: 4, name: 'Paper Cutter', description: 'Normal Quality', price: '180', pictureUrl: [Soon] },
+      { id: 5, name: 'Scissor', description: 'Normal Quality', price: '60', pictureUrl:[Soon]},
+      { id: 6, name: 'Glue Stick', description: 'Company: Nafees', price: '70', pictureUrl: [Soon]},
+      { id: 7, name: 'Elfy', description: 'GMSA', price: '30', pictureUrl: [Soon]},
+      { id: 8, name: 'Metallic Pen Holder', description: 'High Quality', price: '400', pictureUrl: [Soon]},
+    ],
+  },
 ];
 
 
