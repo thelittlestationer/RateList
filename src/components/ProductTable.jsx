@@ -139,9 +139,9 @@ const products = [
     id: 'tapes',
     items: [
       { id: '1', name: 'OSAKA Tape', description: 'White / 10-gazz', price: '70', pictureUrl: [OsakaTape] },
-      { id: '2', name: 'Transparent Squash Tape', description: 'Thickness: 1 inch', price: '160', pictureUrl: [TransparentTape1] },
-      { id: '3', name: 'Transparent Squash Tape', description: 'Thickness: 2 inch', price: '280', pictureUrl: [TransparentTape2] },
-      { id: '4', name: 'Non-Transparent Squash Tape', description: 'Thickness: 1.75 inch', price: '200', pictureUrl: [NonTransparentTape175] },
+      { id: '2', name: 'Transparent Scotch Tape', description: 'Thickness: 1 inch', price: '160', pictureUrl: [TransparentTape1] },
+      { id: '3', name: 'Transparent Scotch Tape', description: 'Thickness: 2 inch', price: '280', pictureUrl: [TransparentTape2] },
+      { id: '4', name: 'Non-Transparent Scotch Tape', description: 'Thickness: 1.75 inch', price: '200', pictureUrl: [NonTransparentTape175] },
       { id: '5', name: 'Transparent Tape', description: 'Thickness: 0.75 inch / 30 yards', price: '40', pictureUrl: [TransparentTape075]},
     ],
   },
