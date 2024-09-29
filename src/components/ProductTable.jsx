@@ -191,7 +191,7 @@ const products = [
   //   ],
   // },
 
-  // {
+  {
     category: 'Others',
     id: 'others',
     items: [
