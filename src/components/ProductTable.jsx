@@ -181,15 +181,15 @@ const products = [
       { id: '2', name: 'Casio 417 Functions Calculator', description: 'fx-991ES', price: '1650', pictureUrl: [Calc417] },
     ],
   },
-  // {
-  //   category: 'Sports',
-  //   id: 'sports',
-  //   items: [
-  //     { id: '1', name: 'Cricket Ball', description: 'FG Company', price: '420', pictureUrl: [Soon] },
-  //     { id: '2', name: 'Table Tennis Ball', description: 'Double circle', price: '80', pictureUrl: [Soon] },
-  //     { id: '3', name: 'Badminton Shuttle', description: 'Ghafoor Champion', price: '350', pictureUrl: [Soon] },
-  //   ],
-  // },
+  {
+    category: 'Sports',
+    id: 'sports',
+    items: [
+      { id: '1', name: 'Cricket Ball', description: 'FG Company', price: '420', pictureUrl: [Soon] },
+      { id: '2', name: 'Table Tennis Ball', description: 'Double circle', price: '80', pictureUrl: [Soon] },
+      // { id: '3', name: 'Badminton Shuttle', description: 'Ghafoor Champion', price: '350', pictureUrl: [Soon] },
+    ],
+  },
 
   {
     category: 'Others',
