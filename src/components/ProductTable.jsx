@@ -98,7 +98,7 @@ const products = [
     items: [
       { id: '1', name: 'Ring Register', description: '5 Portions/Subjects', price: '400', pictureUrl: [P5] },
       {
-        id: '2', name: 'Ring Register', description: '6 Portions/Subjects', price: '450 ', pictureUrl: [P6],
+        id: '2', name: 'Ring Register', description: '6 Portions/Subjects', price: '470 ', pictureUrl: [P6],
         // customClass: 'soldClass',
       },
       { id: '3', name: 'NotePad', description: 'A5 (1/2 of A4)', price: '150', pictureUrl: [A5] },
@@ -109,10 +109,10 @@ const products = [
     category: 'Ball/Pointers Pens',
     id: 'ball-pointers-pens',
     items: [
-      { id: '1', name: 'Piano Ball Pen', description: 'Black, Red', price: '20', pictureUrl: [PianoPen] },
+      { id: '1', name: 'Piano Ball Pen', description: 'Black, Red, Green and Blue color', price: '20', pictureUrl: [PianoPen] },
       { id: '2', name: 'Signature Ball Pen', description: 'Black, Blue', price: '20', pictureUrl: [SignaturePen] },
       { id: '3', name: 'Dollar Ball Pen', description: 'Black, Blue', price: '30', pictureUrl: [DollarPen] },
-      { id: '4', name: 'Dollar Pointer', description: 'Blue, Black, Turquoise', price: '30', pictureUrl: [DollarPointer] },
+      { id: '4', name: 'Dollar Pointer', description: 'Blue, Black, Turquoise and green', price: '30', pictureUrl: [DollarPointer] },
       { id: '5', name: 'Dollar Gel Pen', description: 'Blue, Black', price: '75', pictureUrl: [DollarGelPen] },
       { id: '6', name: 'Dollar Pointer', description: '10 diff: colors pack', price: '330', pictureUrl: [Dollar10Pointers] },
     ],
