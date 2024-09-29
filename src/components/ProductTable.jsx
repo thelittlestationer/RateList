@@ -139,8 +139,8 @@ const products = [
     id: 'tapes',
     items: [
       { id: '1', name: 'OSAKA Tape', description: 'White / 10-gazz', price: '70', pictureUrl: [OsakaTape] },
-      { id: '2', name: 'Transparent Squash Tape', description: 'Thickness: 1 inch', price: '150', pictureUrl: [TransparentTape1] },
-      { id: '3', name: 'Transparent Squash Tape', description: 'Thickness: 2 inch', price: '250', pictureUrl: [TransparentTape2] },
+      { id: '2', name: 'Transparent Squash Tape', description: 'Thickness: 1 inch', price: '160', pictureUrl: [TransparentTape1] },
+      { id: '3', name: 'Transparent Squash Tape', description: 'Thickness: 2 inch', price: '280', pictureUrl: [TransparentTape2] },
       { id: '4', name: 'Non-Transparent Squash Tape', description: 'Thickness: 1.75 inch', price: '200', pictureUrl: [NonTransparentTape175] },
       { id: '5', name: 'Transparent Tape', description: 'Thickness: 0.75 inch / 30 yards', price: '40', pictureUrl: [TransparentTape075]},
     ],
@@ -181,30 +181,30 @@ const products = [
       { id: '2', name: 'Casio 417 Functions Calculator', description: 'fx-991ES', price: '1650', pictureUrl: [Calc417] },
     ],
   },
-  {
-    category: 'Sports',
-    id: 'sports',
-    items: [
-      { id: '1', name: 'Cricket Ball', description: 'FG Company', price: '420', pictureUrl: [Soon] },
-      { id: '2', name: 'Table Tennis Ball', description: 'Double circle', price: '80', pictureUrl: [Soon] },
-      { id: '3', name: 'Badminton Shuttle', description: 'Ghafoor Champion', price: '350', pictureUrl: [Soon] },
-    ],
-  },
+  // {
+  //   category: 'Sports',
+  //   id: 'sports',
+  //   items: [
+  //     { id: '1', name: 'Cricket Ball', description: 'FG Company', price: '420', pictureUrl: [Soon] },
+  //     { id: '2', name: 'Table Tennis Ball', description: 'Double circle', price: '80', pictureUrl: [Soon] },
+  //     { id: '3', name: 'Badminton Shuttle', description: 'Ghafoor Champion', price: '350', pictureUrl: [Soon] },
+  //   ],
+  // },
 
-  {
-    category: 'Others',
-    id: 'others',
-    items: [
-      { id: 1, name: 'Correction Pen', description: '(Whito)', price: '60', pictureUrl: [Soon] },
-      { id: 2, name: 'Sticky Notes', description: '3x3 inch, 100 pcs, (Multicolor)', price: '100', pictureUrl: [Soon] },
-      { id: 3, name: 'NOTE PAD', description: 'High Quality / Size: A6', price: '70', pictureUrl: [Soon] },
-      { id: 4, name: 'Paper Cutter', description: 'Normal Quality', price: '180', pictureUrl: [Soon] },
-      { id: 5, name: 'Scissor', description: 'Normal Quality', price: '60', pictureUrl:[Soon]},
-      { id: 6, name: 'Glue Stick', description: 'Company: Nafees', price: '70', pictureUrl: [Soon]},
-      { id: 7, name: 'Elfy', description: 'GMSA', price: '30', pictureUrl: [Soon]},
-      { id: 8, name: 'Metallic Pen Holder', description: 'High Quality', price: '400', pictureUrl: [Soon]},
-    ],
-  },
+  // {
+  //   category: 'Others',
+  //   id: 'others',
+  //   items: [
+  //     { id: 1, name: 'Correction Pen', description: '(Whito)', price: '60', pictureUrl: [Soon] },
+  //     { id: 2, name: 'Sticky Notes', description: '3x3 inch, 100 pcs, (Multicolor)', price: '100', pictureUrl: [Soon] },
+  //     { id: 3, name: 'NOTE PAD', description: 'High Quality / Size: A6', price: '70', pictureUrl: [Soon] },
+  //     { id: 4, name: 'Paper Cutter', description: 'Normal Quality', price: '180', pictureUrl: [Soon] },
+  //     { id: 5, name: 'Scissor', description: 'Normal Quality', price: '60', pictureUrl:[Soon]},
+  //     { id: 6, name: 'Glue Stick', description: 'Company: Nafees', price: '70', pictureUrl: [Soon]},
+  //     { id: 7, name: 'Elfy', description: 'GMSA', price: '30', pictureUrl: [Soon]},
+  //     { id: 8, name: 'Metallic Pen Holder', description: 'High Quality', price: '400', pictureUrl: [Soon]},
+  //   ],
+  // },
 ];
 
 
