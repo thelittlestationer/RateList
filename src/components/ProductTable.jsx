@@ -208,16 +208,113 @@ const products = [
 ];
 
 
-const ProductTable = ({ selectedCategory }) => {
+// const ProductTable = ({ selectedCategory }) => {
+//   // Filter products based on the selected category
+//   const filteredProducts = selectedCategory === 'all'
+//     ? products
+//     : products.filter(category => category.id === selectedCategory);
+
+//   // Generate WhatsApp link based on the item name, price, and custom class
+//   const generateWhatsAppLink = (name, price, customClass) => {
+//     const numericPrice = price.split(' ')[0]; // Extract numeric part of price
+//     const message = `I want to buy ${name} with price ${numericPrice} PKR`; // Prepare WhatsApp message
+    
+//     let whatsappNumber = '923183098174'; // Default WhatsApp number
+    
+//     // Change WhatsApp number if a specific class is matched
+//     if (customClass === 'specific-class') {
+//       whatsappNumber = '923105688796';
+//     }
+
+//     // Return the WhatsApp API link with the message
+//     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+//   };
+
+//   return (
+//     <div className={styles.tableContainer}>
+//       {filteredProducts.map((category, index) => (
+//         <div key={index} id={category.id}>
+//           {/* Category Heading */}
+//           <h2 className={styles.heading}>{category.category}</h2>
+
+//           {/* Product Table */}
+//           <table className={`table table-striped ${styles.table}`}>
+//             <thead>
+//               <tr>
+//                 <th className={styles.head}>S/No</th>
+//                 <th className={styles.head}>Items</th>
+//                 <th className={styles.head}>Description</th>
+//                 <th className={styles.head}>Price</th>
+//                 <th className={styles.head}>Action</th>
+//                 <th className={styles.head}>Picture</th>
+//               </tr>
+//             </thead>
+//             <tbody>
+//               {/* Loop through category items */}
+//               {category.items.map(item => (
+//                 <tr key={item.id}>
+//                   <td>{item.id}</td> {/* Item ID */}
+//                   <td>{item.name}</td> {/* Item Name */}
+//                   <td>{item.description}</td> {/* Item Description */}
+//                   <td>{item.price}</td> {/* Item Price */}
+//                   <td>
+              
+//                        <a
+//                         href={generateWhatsAppLink(item.name, item.price, item.customClass)}
+//                         target="_blank"
+//                         rel="noopener noreferrer"
+//                         className={styles.btn}
+//                       >
+//                         Buy
+//                       </a>
+                    
+//                   </td>
+//                   <td>
+//                     {/* Link to item picture */}
+//                     <a
+//                       href={item.pictureUrl}
+//                       target="_blank"
+//                       rel="noopener noreferrer"
+//                       className={styles.btn}
+//                     >
+//                       Picture
+//                     </a>
+//                   </td>
+//                 </tr>
+//               ))}
+//             </tbody>
+//           </table>
+
+//           <hr style={{ border: '2px solid black', marginBottom: '20px' }} />
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default ProductTable;  
+
+
+const ProductTable = ({ selectedCategory, applyDiscount }) => {
+  // Function to calculate discounted price based on category and discount logic
+  const calculateDiscountedPrice = (price, category) => {
+    const numericPrice = parseFloat(price.split(' ')[0]); // Extract numeric part of the price
+    if (!applyDiscount) return numericPrice;
+
+    if (category === 'Calculators') {
+      return numericPrice * 0.95; // 5% discount for calculators
+    }
+    return numericPrice * 0.90; // 10% discount for all other categories
+  };
+
   // Filter products based on the selected category
   const filteredProducts = selectedCategory === 'all'
     ? products
     : products.filter(category => category.id === selectedCategory);
 
-  // Generate WhatsApp link based on the item name, price, and custom class
-  const generateWhatsAppLink = (name, price, customClass) => {
-    const numericPrice = price.split(' ')[0]; // Extract numeric part of price
-    const message = `I want to buy ${name} with price ${numericPrice} PKR`; // Prepare WhatsApp message
+  // Generate WhatsApp link based on the item name, discounted price, and custom class
+  const generateWhatsAppLink = (name, discountedPrice, customClass) => {
+    const message = `I want to buy ${name} with price ${discountedPrice} PKR`; // Prepare WhatsApp message
     
     let whatsappNumber = '923183098174'; // Default WhatsApp number
     
@@ -250,39 +347,44 @@ const ProductTable = ({ selectedCategory }) => {
               </tr>
             </thead>
             <tbody>
-              {/* Loop through category items */}
-              {category.items.map(item => (
-                <tr key={item.id}>
-                  <td>{item.id}</td> {/* Item ID */}
-                  <td>{item.name}</td> {/* Item Name */}
-                  <td>{item.description}</td> {/* Item Description */}
-                  <td>{item.price}</td> {/* Item Price */}
-                  <td>
-              
-                       <a
-                        href={generateWhatsAppLink(item.name, item.price, item.customClass)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.btn}
-                      >
-                        Buy
-                      </a>
-                    
-                  </td>
-                  <td>
-                    {/* Link to item picture */}
-                    <a
-                      href={item.pictureUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.btn}
-                    >
-                      Picture
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
+  {category.items.map(item => {
+    const discountedPrice = calculateDiscountedPrice(item.price, category.category).toFixed(2);
+    return (
+      <tr key={item.id}>
+        <td>{item.id}</td> {/* Item ID */}
+        <td>{item.name}</td> {/* Item Name */}
+        <td>{item.description}</td> {/* Item Description */}
+        <td>
+          <span style={{ textDecoration: 'line-through', marginRight: '10px' }}>
+            {item.price}
+          </span>
+          <span>{discountedPrice} PKR</span>
+        </td>
+        <td>
+          <a
+            href={generateWhatsAppLink(item.name, discountedPrice, item.customClass)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.btn}
+          >
+            Buy
+          </a>
+        </td>
+        <td>
+          <a
+            href={item.pictureUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.btn}
+          >
+            Picture
+          </a>
+        </td>
+      </tr>
+    );
+  })}
+</tbody>
+
           </table>
 
           <hr style={{ border: '2px solid black', marginBottom: '20px' }} />
@@ -292,4 +394,4 @@ const ProductTable = ({ selectedCategory }) => {
   );
 };
 
-export default ProductTable;  
+export default ProductTable;
