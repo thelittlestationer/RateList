@@ -41,7 +41,7 @@ import styles from './App.module.css';
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'); // State for selected category
   //const applyDiscount = true; // Discount is always applied
-  const [applyDiscount, setApplyDiscount] = useState(true); // State to control discount
+  const [applyDiscount, setApplyDiscount] = useState(false); // State to control discount
 
   return (
     <div className={styles.container}>

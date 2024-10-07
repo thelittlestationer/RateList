@@ -294,7 +294,6 @@ const products = [
 
 // export default ProductTable;  
 
-
 const ProductTable = ({ selectedCategory, applyDiscount }) => {
   // Function to calculate discounted price based on category and discount logic
   const calculateDiscountedPrice = (price, category) => {
@@ -320,7 +319,7 @@ const ProductTable = ({ selectedCategory, applyDiscount }) => {
     
     // Change WhatsApp number if a specific class is matched
     if (customClass === 'specific-class') {
-      whatsappNumber = '923105688796';
+      whatsappNumber = '';
     }
 
     // Return the WhatsApp API link with the message
@@ -355,9 +354,11 @@ const ProductTable = ({ selectedCategory, applyDiscount }) => {
         <td>{item.name}</td> {/* Item Name */}
         <td>{item.description}</td> {/* Item Description */}
         <td>
-          <span style={{ textDecoration: 'line-through', marginRight: '10px' }}>
-            {item.price}
-          </span>
+          {applyDiscount && (
+            <span style={{ textDecoration: 'line-through', marginRight: '10px' }}>
+              {item.price}
+            </span>
+          )}
           <span>{discountedPrice} PKR</span>
         </td>
         <td>
