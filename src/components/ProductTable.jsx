@@ -175,10 +175,10 @@ const products = [
     id: 'calculators',
     items: [
       {
-        id: '1', name: 'Casio 552 Functions Calculator', description: 'fx-991EX', price: '2400', pictureUrl: [Calc552],
+        id: '1', name: 'Casio 552 Functions Calculator', description: 'fx-991EX', price: '2500', pictureUrl: [Calc552],
         
       },
-      { id: '2', name: 'Casio 417 Functions Calculator', description: 'fx-991ES', price: '1650', pictureUrl: [Calc417] },
+      { id: '2', name: 'Casio 417 Functions Calculator', description: 'fx-991ES', price: '1700', pictureUrl: [Calc417] },
     ],
   },
   {
