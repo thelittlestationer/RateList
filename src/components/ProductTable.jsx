@@ -82,12 +82,12 @@ const products = [
     category: 'Rough Pages Registers',
     id: 'rough-pages-registers',
     items: [
-      { id: '1', name: 'Ring Register', description: '~100 pages', price: '230', pictureUrl: [ringrough] },
-      { id: '2', name: 'Ring Register', description: '~180 pages', price: '360', pictureUrl: [ringrough180] },
-      { id: '3', name: 'Non-Ring Register', description: '~150 pages', price: '250', pictureUrl: [NonRingRoughRegister150] },
+      // { id: '1', name: 'Ring Register', description: '~100 pages', price: '230', pictureUrl: [ringrough] },
+      { id: '1', name: 'Ring Register', description: '~180 pages', price: '360', pictureUrl: [ringrough180] },
+      // { id: '3', name: 'Non-Ring Register', description: '~150 pages', price: '250', pictureUrl: [NonRingRoughRegister150] },
 
       {
-        id: '4', name: 'Non-Ring Register', description: '~210 pages', price: '360', pictureUrl: [NonRingRoughRegister210],
+        id: '2', name: 'Non-Ring Register', description: '~210 pages', price: '360', pictureUrl: [NonRingRoughRegister210],
         // customClass: 'specific-class',
       }
     ],
@@ -101,8 +101,8 @@ const products = [
         id: '2', name: 'Ring Register', description: '6 Portions/Subjects', price: '470 ', pictureUrl: [P6],
         // customClass: 'soldClass',
       },
-      { id: '3', name: 'NotePad', description: 'A5 (1/2 of A4)', price: '150', pictureUrl: [A5] },
-      { id: '4', name: 'NotePad', description: 'A6 (1/4 of A4)', price: '70', pictureUrl: [A6] },
+      // { id: '3', name: 'NotePad', description: 'A5 (1/2 of A4)', price: '150', pictureUrl: [A5] },
+      { id: '3', name: 'NotePad', description: 'A6 (1/4 of A4)', price: '70', pictureUrl: [A6] },
     ],
   },
   {
@@ -122,15 +122,15 @@ const products = [
     id: 'pages-sheets',
     items: [
       { id: '1', name: 'A4 Size Paper', description: '70 GSM / White', price: '4', pictureUrl: [A4WhitePages] },
-      { id: '2', name: 'Legal Size Paper', description: '70 GSM / White', price: '6', pictureUrl: 'https://example.com/images/legal_paper.jpg' },
-      { id: '3', name: 'Narrow Line Sheets', description: 'Base/Medium/Neat', price: '100 / 110 / 140', pictureUrl: [NarrowLineSheets] },
+      // { id: '2', name: 'Legal Size Paper', description: '70 GSM / White', price: '6', pictureUrl: 'https://example.com/images/legal_paper.jpg' },
+      { id: '2', name: 'Narrow Line Sheets', description: 'Medium/Neat', price: '110', pictureUrl: [NarrowLineSheets] },
     ],
   },
   {
     category: 'Markers / Highlighters',
     id: 'markers-highlighters',
     items: [
-      { id: '1', name: 'Dollar Marker', description: 'Black, Blue, Green', price: '20', pictureUrl: [DollarMarker] },
+      { id: '1', name: 'Dollar Marker', description: 'Black, Blue', price: '20', pictureUrl: [DollarMarker] },
       { id: '2', name: 'Dollar Neon Highlighter', description: 'Yellow, Pink', price: '50', pictureUrl: [DollarNeonMarker] },
     ],
   },
@@ -181,28 +181,28 @@ const products = [
       { id: '2', name: 'Casio 417 Functions Calculator', description: 'fx-991ES', price: '1700', pictureUrl: [Calc417] },
     ],
   },
-  {
-    category: 'Sports',
-    id: 'sports',
-    items: [
-      { id: '1', name: 'Cricket Ball', description: 'FG Company', price: '420', pictureUrl: [Soon] },
-      { id: '2', name: 'Table Tennis Ball', description: 'Double circle', price: '80', pictureUrl: [Soon] },
-      // { id: '3', name: 'Badminton Shuttle', description: 'Ghafoor Champion', price: '350', pictureUrl: [Soon] },
-    ],
-  },
+  // {
+  //   category: 'Sports',
+  //   id: 'sports',
+  //   items: [
+  //     { id: '1', name: 'Cricket Ball', description: 'FG Company', price: '420', pictureUrl: [Soon] },
+  //     { id: '2', name: 'Table Tennis Ball', description: 'Double circle', price: '80', pictureUrl: [Soon] },
+  //     // { id: '3', name: 'Badminton Shuttle', description: 'Ghafoor Champion', price: '350', pictureUrl: [Soon] },
+  //   ],
+  // },
 
   {
     category: 'Others',
     id: 'others',
     items: [
-      { id: 1, name: 'Correction Pen', description: '(Whito)', price: '60', pictureUrl: [Soon] },
-      { id: 2, name: 'Sticky Notes', description: '3x3 inch, 100 pcs, (Multicolor)', price: '100', pictureUrl: [Soon] },
-      { id: 3, name: 'NOTE PAD', description: 'High Quality / Size: A6', price: '70', pictureUrl: [Soon] },
-      { id: 4, name: 'Paper Cutter', description: 'Normal Quality', price: '180', pictureUrl: [Soon] },
-      { id: 5, name: 'Scissor', description: 'Normal Quality', price: '60', pictureUrl:[Soon]},
-      { id: 6, name: 'Glue Stick', description: 'Company: Nafees', price: '70', pictureUrl: [Soon]},
-      { id: 7, name: 'Elfy', description: 'GMSA', price: '30', pictureUrl: [Soon]},
-      { id: 8, name: 'Metallic Pen Holder', description: 'High Quality', price: '400', pictureUrl: [Soon]},
+      // { id: 1, name: 'Correction Pen', description: '(Whito)', price: '60', pictureUrl: [Soon] },
+      { id: 1, name: 'Sticky Notes', description: '3x3 inch, 100 pcs, (Multicolor)', price: '100', pictureUrl: [Soon] },
+      // { id: 3, name: 'NOTE PAD', description: 'High Quality / Size: A6', price: '70', pictureUrl: [Soon] },
+      // { id: 4, name: 'Paper Cutter', description: 'Normal Quality', price: '180', pictureUrl: [Soon] },
+      // { id: 5, name: 'Scissor', description: 'Normal Quality', price: '60', pictureUrl:[Soon]},
+      // { id: 6, name: 'Glue Stick', description: 'Company: Nafees', price: '70', pictureUrl: [Soon]},
+      { id: 2, name: 'Elfy', description: 'GMSA', price: '30', pictureUrl: [Soon]},
+      // { id: 8, name: 'Metallic Pen Holder', description: 'High Quality', price: '400', pictureUrl: [Soon]},
     ],
   },
 ];
