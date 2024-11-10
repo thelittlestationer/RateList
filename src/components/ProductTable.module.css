@@ -175,3 +175,7 @@
   align-items: center;
 }
 
+th, td {
+  text-align: left;
+  border: 0.1px solid #ddd;
+}
