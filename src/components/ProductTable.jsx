@@ -52,8 +52,9 @@ import Eraser from './Pictures/Eraser.jpg';
 import Sharpner from './Pictures/Sharpner.jpg';
 
 //CALCULATORS
-import Calc417 from './Pictures/417.CasioCalculator.jpg';
 import Calc552 from './Pictures/552.CasioCalculator.jpg';
+import Calc417 from './Pictures/417.CasioCalculator.jpg';
+import Calc4172 from './Pictures/417.CasioCalculator2.jpg';
 
 
 
@@ -109,10 +110,10 @@ const products = [
     category: 'Ball/Pointers Pens',
     id: 'ball-pointers-pens',
     items: [
-      { id: '1', name: 'Piano Ball Pen', description: 'Black, Red, Green and Blue color', price: '20', pictureUrl: [PianoPen] },
+      { id: '1', name: 'Piano Ball Pen', description: 'Black, Red and Blue color', price: '20', pictureUrl: [PianoPen] },
       { id: '2', name: 'Signature Ball Pen', description: 'Black, Blue', price: '20', pictureUrl: [SignaturePen] },
       { id: '3', name: 'Dollar Ball Pen', description: 'Black, Blue', price: '30', pictureUrl: [DollarPen] },
-      { id: '4', name: 'Dollar Pointer', description: 'Blue, Black, Turquoise and green', price: '30', pictureUrl: [DollarPointer] },
+      { id: '4', name: 'Dollar Pointer', description: 'Blue, Black and green', price: '30', pictureUrl: [DollarPointer] },
       { id: '5', name: 'Dollar Gel Pen', description: 'Blue, Black', price: '75', pictureUrl: [DollarGelPen] },
       { id: '6', name: 'Dollar Pointer', description: '10 diff: colors pack', price: '330', pictureUrl: [Dollar10Pointers] },
     ],
@@ -179,6 +180,7 @@ const products = [
         
       },
       { id: '2', name: 'Casio 417 Functions Calculator', description: 'fx-991ES', price: '1700', pictureUrl: [Calc417] },
+      { id: '3', name: 'Casio 417 Functions Calculator', description: 'High Quality', price: '1850', pictureUrl: [Calc4172  ] },
     ],
   },
   // {
