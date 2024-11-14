@@ -124,7 +124,7 @@ const products = [
     items: [
       { id: '1', name: 'A4 Size Paper', description: '70 GSM / White', price: '4', pictureUrl: [A4WhitePages] },
       // { id: '2', name: 'Legal Size Paper', description: '70 GSM / White', price: '6', pictureUrl: 'https://example.com/images/legal_paper.jpg' },
-      { id: '2', name: 'Narrow Line Sheets', description: 'Medium/Neat', price: '110', pictureUrl: [NarrowLineSheets] },
+      { id: '2', name: 'Narrow Line Sheets', description: 'Medium/Neat', price: '110/140', pictureUrl: [NarrowLineSheets] },
     ],
   },
   {
@@ -296,16 +296,119 @@ const products = [
 
 // export default ProductTable;  
 
+// const ProductTable = ({ selectedCategory, applyDiscount }) => {
+//   // Function to calculate discounted price based on category and discount logic
+//   const calculateDiscountedPrice = (price, category) => {
+//     const numericPrice = parseFloat(price.split(' ')[0]); // Extract numeric part of the price
+//     if (!applyDiscount) return numericPrice;
+
+//     if (category === 'Calculators') {
+//       return numericPrice * 0.95; // 5% discount for calculators
+//     }
+//     return numericPrice * 0.90; // 10% discount for all other categories
+//   };
+
+//   // Filter products based on the selected category
+//   const filteredProducts = selectedCategory === 'all'
+//     ? products
+//     : products.filter(category => category.id === selectedCategory);
+
+//   // Generate WhatsApp link based on the item name, discounted price, and custom class
+//   const generateWhatsAppLink = (name, discountedPrice, customClass) => {
+//     const message = `I want to buy ${name} with price ${discountedPrice} PKR`; // Prepare WhatsApp message
+    
+//     let whatsappNumber = '923183098174'; // Default WhatsApp number
+    
+//     // Change WhatsApp number if a specific class is matched
+//     if (customClass === 'specific-class') {
+//       whatsappNumber = '';
+//     }
+
+//     // Return the WhatsApp API link with the message
+//     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+//   };
+
+//   return (
+//     <div className={styles.tableContainer}>
+//       {filteredProducts.map((category, index) => (
+//         <div key={index} id={category.id}>
+//           {/* Category Heading */}
+//           <h2 className={styles.heading}>{category.category}</h2>
+
+//           {/* Product Table */}
+//           <table className={`table table-striped ${styles.table}`}>
+//             <thead>
+//               <tr>
+//                 <th className={styles.head}>S/No</th>
+//                 <th className={styles.head}>Items</th>
+//                 <th className={styles.head}>Description</th>
+//                 <th className={styles.head}>Price</th>
+//                 <th className={styles.head}>Action</th>
+//                 <th className={styles.head}>Picture</th>
+//               </tr>
+//             </thead>
+//             <tbody>
+//   {category.items.map(item => {
+//     const discountedPrice = calculateDiscountedPrice(item.price, category.category).toFixed(2);
+//     return (
+//       <tr key={item.id}>
+//         <td>{item.id}</td> {/* Item ID */}
+//         <td>{item.name}</td> {/* Item Name */}
+//         <td>{item.description}</td> {/* Item Description */}
+//         <td>
+//           {applyDiscount && (
+//             <span style={{ textDecoration: 'line-through', marginRight: '10px' }}>
+//               {item.price}
+//             </span>
+//           )}
+//           <span>{discountedPrice} PKR</span>
+//         </td>
+//         <td>
+//           <a
+//             href={generateWhatsAppLink(item.name, discountedPrice, item.customClass)}
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className={styles.btn}
+//           >
+//             Buy
+//           </a>
+//         </td>
+//         <td>
+//           <a
+//             href={item.pictureUrl}
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className={styles.btn}
+//           >
+//             Picture
+//           </a>
+//         </td>
+//       </tr>
+//     );
+//   })}
+// </tbody>
+
+//           </table>
+
+//           <hr style={{ border: '2px solid black', marginBottom: '20px' }} />
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default ProductTable;
 const ProductTable = ({ selectedCategory, applyDiscount }) => {
   // Function to calculate discounted price based on category and discount logic
   const calculateDiscountedPrice = (price, category) => {
-    const numericPrice = parseFloat(price.split(' ')[0]); // Extract numeric part of the price
-    if (!applyDiscount) return numericPrice;
+    const prices = price.split('/').map(p => parseFloat(p.trim())); // Parse multiple prices
+    const discountFactor = category === 'Calculators' ? 0.95 : 0.90; // 5% or 10% discount
 
-    if (category === 'Calculators') {
-      return numericPrice * 0.95; // 5% discount for calculators
+    // Apply discount if needed
+    if (applyDiscount) {
+      return prices.map(p => (p * discountFactor).toFixed(2)).join('/'); // Discounted prices for all variants
     }
-    return numericPrice * 0.90; // 10% discount for all other categories
+    return prices.join('/');
   };
 
   // Filter products based on the selected category
@@ -313,15 +416,14 @@ const ProductTable = ({ selectedCategory, applyDiscount }) => {
     ? products
     : products.filter(category => category.id === selectedCategory);
 
-  // Generate WhatsApp link based on the item name, discounted price, and custom class
+  // Generate WhatsApp link based on the item name and discounted price
   const generateWhatsAppLink = (name, discountedPrice, customClass) => {
     const message = `I want to buy ${name} with price ${discountedPrice} PKR`; // Prepare WhatsApp message
-    
-    let whatsappNumber = '923183098174'; // Default WhatsApp number
-    
-    // Change WhatsApp number if a specific class is matched
+    let whatsappNumber = '923183098174';
+
+    // Specific WhatsApp number based on custom class
     if (customClass === 'specific-class') {
-      whatsappNumber = '';
+      whatsappNumber = ''; // Adjust as needed
     }
 
     // Return the WhatsApp API link with the message
@@ -330,7 +432,7 @@ const ProductTable = ({ selectedCategory, applyDiscount }) => {
 
   return (
     <div className={styles.tableContainer}>
-      {filteredProducts.map((category, index) => (
+      {filteredProducts?.map((category, index) => (
         <div key={index} id={category.id}>
           {/* Category Heading */}
           <h2 className={styles.heading}>{category.category}</h2>
@@ -348,46 +450,45 @@ const ProductTable = ({ selectedCategory, applyDiscount }) => {
               </tr>
             </thead>
             <tbody>
-  {category.items.map(item => {
-    const discountedPrice = calculateDiscountedPrice(item.price, category.category).toFixed(2);
-    return (
-      <tr key={item.id}>
-        <td>{item.id}</td> {/* Item ID */}
-        <td>{item.name}</td> {/* Item Name */}
-        <td>{item.description}</td> {/* Item Description */}
-        <td>
-          {applyDiscount && (
-            <span style={{ textDecoration: 'line-through', marginRight: '10px' }}>
-              {item.price}
-            </span>
-          )}
-          <span>{discountedPrice} PKR</span>
-        </td>
-        <td>
-          <a
-            href={generateWhatsAppLink(item.name, discountedPrice, item.customClass)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.btn}
-          >
-            Buy
-          </a>
-        </td>
-        <td>
-          <a
-            href={item.pictureUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.btn}
-          >
-            Picture
-          </a>
-        </td>
-      </tr>
-    );
-  })}
-</tbody>
-
+              {category.items?.map(item => {
+                const discountedPrice = calculateDiscountedPrice(item.price, category.category);
+                return (
+                  <tr key={item.id}>
+                    <td>{item.id}</td>
+                    <td>{item.name}</td>
+                    <td>{item.description}</td>
+                    <td>
+                      {applyDiscount && (
+                        <span style={{ textDecoration: 'line-through', marginRight: '10px' }}>
+                          {item.price}
+                        </span>
+                      )}
+                      <span>{discountedPrice} PKR</span>
+                    </td>
+                    <td>
+                      <a
+                        href={generateWhatsAppLink(item.name, discountedPrice, item.customClass)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.btn}
+                      >
+                        Buy
+                      </a>
+                    </td>
+                    <td>
+                      <a
+                        href={item.pictureUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.btn}
+                      >
+                        Picture
+                      </a>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
           </table>
 
           <hr style={{ border: '2px solid black', marginBottom: '20px' }} />
